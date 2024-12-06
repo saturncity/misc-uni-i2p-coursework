@@ -187,21 +187,4 @@ public class SnackMachine {
     public ArrayList<Penny> getPennies() {
         return pennies;
     }
-
-    /**
-     * Gets a list of all unique flavours currently available in the machine.
-     *
-     * @return an ArrayList of unique crisp flavours as Strings.
-     */
-    public ArrayList<String> getAvailableFlavours() {
-        ArrayList<String> availableFlavours = new ArrayList<>();
-        for (PackOfCrisps pack : packets) {
-            String flavour = pack.getFlavour();
-            if (!availableFlavours.contains(flavour)) {
-                availableFlavours.add(flavour);
-            }
-        }
-        return availableFlavours;
-    }
-
 }
